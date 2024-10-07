@@ -1,9 +1,9 @@
-import './studentPanel.scss' 
+import './MainMenu.scss' 
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
-import menu1 from '../../img/menuCafeteria/menu1.png';
+import menu1 from '../../../../assets/menuCafeteria/menu1.png';
 
 function MainMenu() {
   return (
