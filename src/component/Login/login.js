@@ -1,33 +1,43 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import Logo from '../../assets/img/logo192.jpg';
 import Button from 'react-bootstrap/Button';
-import './login.scss' 
+import './login.scss'; 
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import axios from 'axios';
 
 function Login(_props) {
   const navigate = useNavigate();
-  const [email, setEmail] = useState(''); // Estado para almacenar el email
-  const [password, setPassword] = useState(''); // Estado para la contraseña
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  // Función para elegir el tipo de usuario y redirigir según el correo
-  const asignarPanelDeUsuario = (event) => {
-    event.preventDefault(); // Evitar el comportamiento por defecto
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    try {
+      console.log('Enviando solicitud de login:', { username: email, password });
+      const response = await axios.post('http://localhost:4000/auth/login', { username: email, password });
+      const token = response.data.access_token;
+      localStorage.setItem('token', token);
 
-    // Verificar si el correo termina en @galileo.edu o @gmail.com
-    if (email.endsWith('@galileo.edu')) {
-      navigate('/main-menu'); // Navegar al panel del administrador
-    } else if (email.endsWith('@gmail.com')) {
-      navigate('/buscar-orden'); // Navegar al panel del estudiante
-    } else {
-      alert('Correo no válido. Use un correo de @galileo.edu o @gmail.com');
+      if (email.endsWith('@galileo.edu')) {
+        navigate('/main-menu');
+      } else if (email.endsWith('@gmail.com')) {
+        navigate('/buscar-orden');
+      } else {
+        toast.error('Correo no válido. Use un correo de @galileo.edu o @gmail.com', { autoClose: 5000 });
+      }
+    } catch (error) {
+      console.error('Error al iniciar sesión', error);
+      toast.error('Credenciales inválidas', { autoClose: 5000 });
     }
   };
 
   return (
     <div className="login-container d-flex align-items-center justify-content-center vh-100">
-      <Form className="text-center p-4 login-form" onSubmit={asignarPanelDeUsuario}>
+      <Form className="text-center p-4 login-form" onSubmit={handleLogin}>
         <div className="mb-4">
           <Image src={Logo} rounded className="login-logo" />
         </div>
@@ -53,6 +63,7 @@ function Login(_props) {
           Iniciar Sesión
         </Button>
       </Form>
+      <ToastContainer />
     </div>
   );
 }
