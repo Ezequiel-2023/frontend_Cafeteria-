@@ -1,6 +1,8 @@
 import { Container, Row, Col, Table, Form, Button } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import './SearchOrderNumber.scss'
+import { Link } from 'react-router-dom';
+
 
 function SearchOrderNumber() {
   return (
@@ -8,15 +10,14 @@ function SearchOrderNumber() {
       <Row>
         {/* Barra de navegación vertical */}
         <Col xs={3} className="nav-column">
-          <Nav defaultActiveKey="/home" className="flex-column">
-            <Nav.Link href="/home">Inicio</Nav.Link>
-            <Nav.Link eventKey="link-1">Órdenes en Proceso</Nav.Link>
-            <Nav.Link eventKey="link-2">Buscar Orden</Nav.Link>
-            <Nav.Link eventKey="link-3">Editar Usuario</Nav.Link>
-            <Nav.Link eventKey="link-4">Agregar Usuario</Nav.Link>
-            <Nav.Link eventKey="link-5">Actualizar Información Cafetería</Nav.Link>
-            <Nav.Link eventKey="link-6">Actualizar Categoría</Nav.Link>
-            <Nav.Link eventKey="link-7">Actualizar Menú</Nav.Link>
+        <Nav defaultActiveKey="/home" className="flex-column">
+            <Nav.Link as={Link} to="/ordenes-proceso">Órdenes en Proceso</Nav.Link>
+            <Nav.Link as={Link} to="/buscar-orden">Buscar Orden</Nav.Link>
+            <Nav.Link as={Link} to="/editar-usuario">Editar Usuario</Nav.Link>
+            <Nav.Link as={Link} to="/agregar-usuario">Agregar Usuario</Nav.Link>
+            <Nav.Link as={Link} to="/actualizar-cafeteria">Actualizar Información Cafetería</Nav.Link>
+            <Nav.Link as={Link} to="/actualizar-categoria">Actualizar Categoría</Nav.Link>
+            <Nav.Link as={Link} to="/actualizar-menu">Actualizar Menú</Nav.Link>
           </Nav>
         </Col>
 
