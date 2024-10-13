@@ -1,6 +1,9 @@
-import huevosRancheros from '../../../../assets/HuevosRancheros.png'
-import tostadasFrancesas from '../../../../assets/TostadasFrancesa.png'
-import omeleteVegetariano from '../../../../assets/omelleteVeg.jpg'
+import axios from 'axios';
+const response = await axios.get('http://localhost:4000/producto');
+const menuItems = response.data;
+
+export default menuItems;
+/*
 const menuItems = [
     {
         id: 1,
@@ -170,7 +173,7 @@ const menuItems = [
         image: "/ruta/a/sopa_de_pollo.png",
         category: "Sopas"
     },
-];
+];*/
 
 
-export default menuItems;
+
