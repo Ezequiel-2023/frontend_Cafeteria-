@@ -2,12 +2,16 @@
   "name": "cafeteria_frontend",
   "version": "0.1.0",
   "private": true,
+  "main": "main.js",
+
   "dependencies": {
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "cross-env": "^7.0.3",
+    "electron-is-dev": "^3.0.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
@@ -18,11 +22,13 @@
     "web-vitals": "^4.2.3"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+    "eject": "react-scripts eject",
+    "electron-dev": "cross-env ELECTRON_START_URL=http://localhost:3000 electron .",
+    "electron-pack": "react-scripts build && cross-env ELECTRON_START_URL=file://`pwd`/build electron ."
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -43,6 +49,21 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "sass": "^1.79.4"
+    "concurrently": "^7.6.0",
+    "electron": "^32.2.0",
+    "electron-builder": "^25.1.8",
+    "sass": "^1.79.4",
+    "wait-on": "^6.0.1"
+  },
+  "build": {
+    "appId": "com.tu-app.id",
+    "files": [
+      "build/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }
