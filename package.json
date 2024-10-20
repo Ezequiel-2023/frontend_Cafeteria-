@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "main": "main.js",
-
   "dependencies": {
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
@@ -28,7 +27,7 @@
     "eject": "react-scripts eject",
     "electron-dev": "cross-env ELECTRON_START_URL=http://localhost:3000 electron .",
     "electron-pack": "react-scripts build && cross-env ELECTRON_START_URL=file://`pwd`/build electron ."
-},
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -52,7 +51,7 @@
     "concurrently": "^7.6.0",
     "electron": "^32.2.0",
     "electron-builder": "^25.1.8",
-    "sass": "^1.79.4",
+    "sass": "^1.80.3",
     "wait-on": "^6.0.1"
   },
   "build": {

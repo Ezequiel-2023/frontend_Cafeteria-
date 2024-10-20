@@ -1,5 +1,5 @@
 // app.scss
-@import '~bootstrap/scss/bootstrap';
+@use '~bootstrap/scss/bootstrap' as *;
 .App {
   text-align: center;
 }
