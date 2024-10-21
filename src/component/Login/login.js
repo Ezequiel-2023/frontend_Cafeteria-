@@ -5,12 +5,12 @@ import Image from 'react-bootstrap/Image';
 import Logo from '../../assets/img/logo192.jpg';
 import Button from 'react-bootstrap/Button';
 import './login.scss'; 
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'; 
 import { useState } from 'react';
 import axios from 'axios';
 
 function Login(_props) {
-  const navigate = useNavigate();
+  const navigate = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
