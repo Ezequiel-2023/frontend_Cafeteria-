@@ -1,5 +1,6 @@
 // app.scss
-@import '~bootstrap/scss/bootstrap';
+// importar boostrap para responsi
+@use '~bootstrap/scss/bootstrap';
 .App {
   text-align: center;
 }
