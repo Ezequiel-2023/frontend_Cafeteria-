@@ -1,7 +1,11 @@
-import { Container, Row, Col,  } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
-import './actualizarCategoria.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faSearch, faUserEdit, faUserPlus, faBuilding, faTag, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import './actualizarCategoria.scss';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 function ActualizarCategoria() {
   return (
@@ -9,21 +13,65 @@ function ActualizarCategoria() {
       <Row>
         {/* Barra de navegación vertical */}
         <Col xs={3} className="nav-column">
-        <Nav defaultActiveKey="/home" className="flex-column">
-            <Nav.Link as={Link} to="/ordenes-proceso">Órdenes en Proceso</Nav.Link>
-            <Nav.Link as={Link} to="/buscar-orden">Buscar Orden</Nav.Link>
-            <Nav.Link as={Link} to="/editar-usuario">Editar Usuario</Nav.Link>
-            <Nav.Link as={Link} to="/agregar-usuario">Agregar Usuario</Nav.Link>
-            <Nav.Link as={Link} to="/actualizar-cafeteria">Actualizar Información Cafetería</Nav.Link>
-            <Nav.Link as={Link} to="/actualizar-categoria">Actualizar Categoría</Nav.Link>
-            <Nav.Link as={Link} to="/actualizar-menu">Actualizar Menú</Nav.Link>
+          <Nav defaultActiveKey="/home" className="flex-column">
+            <Nav.Link as={Link} to="/ordenes-proceso">
+              <FontAwesomeIcon icon={faHome} className="icon" /> Órdenes en Proceso
+            </Nav.Link>
+            <Nav.Link as={Link} to="/buscar-orden">
+              <FontAwesomeIcon icon={faSearch} className="icon" /> Buscar Orden
+            </Nav.Link>
+            <Nav.Link as={Link} to="/editar-usuario">
+              <FontAwesomeIcon icon={faUserEdit} className="icon" /> Editar Usuario
+            </Nav.Link>
+            <Nav.Link as={Link} to="/agregar-usuario">
+              <FontAwesomeIcon icon={faUserPlus} className="icon" /> Agregar Usuario
+            </Nav.Link>
+            <Nav.Link as={Link} to="/actualizar-cafeteria">
+              <FontAwesomeIcon icon={faBuilding} className="icon" /> Actualizar Información Cafetería
+            </Nav.Link>
+            <Nav.Link as={Link} to="/actualizar-categoria">
+              <FontAwesomeIcon icon={faTag} className="icon" /> Actualizar Categoría
+            </Nav.Link>
+            <Nav.Link as={Link} to="/actualizar-menu">
+              <FontAwesomeIcon icon={faUtensils} className="icon" /> Actualizar Menú
+            </Nav.Link>
           </Nav>
         </Col>
-        {/* aqui enpieza lo que esta fuera de la navegacion*/}
+        {/* aquí empieza lo que está fuera de la navegación */}
         <Col xs={9} className="content-column">
-          <div>
-            <h1>hola desde Actualizar categoria</h1>
-          </div>   
+        <div className="rounded">
+            <h1> Categoria</h1>
+            <h2>Agregar Categoria</h2>
+            <Form>
+             <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Nombre</Form.Label>
+                  <Form.Control type="text" placeholder="" />
+              </Form.Group>
+               <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Descripcion</Form.Label>
+                  <Form.Control type="text" placeholder="" />
+               </Form.Group>
+              <Button variant="primary" type="submit">
+               Agregar
+              </Button>
+             </Form>
+          </div>
+          <div className="rounded">
+            <h2>Actualizar Categoria</h2>
+            <Form>
+             <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Nombre</Form.Label>
+                  <Form.Control type="text" placeholder="" />
+              </Form.Group>
+               <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Descripcion</Form.Label>
+                  <Form.Control type="text" placeholder="" />
+               </Form.Group>
+              <Button variant="primary" type="submit">
+               Agregar
+              </Button>
+             </Form>
+          </div>    
         </Col>
       </Row>
     </Container>

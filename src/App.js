@@ -9,25 +9,11 @@ import AgregarUsuario from './component/pages/AdminPanel/agregarUsuario/AgregarU
 import ActualizarCafeteria from './component/pages/AdminPanel/actiualizarCafeteria/ActualizarCafeteria';
 import ActualizarCategoria from './component/pages/AdminPanel/actualizarCategoria/ActualizarCategoria';
 import ActualizarMenu from './component/pages/AdminPanel/actualizarMenu/ActualizarMenu';
-import React, { useEffect } from 'react';
+
 
 function App() {
-  useEffect(() => {
-    document.getElementById('minimize-button').addEventListener('click', () => {
-      window.electron.minimize();
-    });
-
-    document.getElementById('close-button').addEventListener('click', () => {
-      window.electron.close();
-    });
-  }, []);
   return (
     <Router>
-      <div className="title-bar">
-         <button id="minimize-button">_</button>
-         <button id="close-button">X</button>
-      </div>
-
       <div className="App">
         <Routes>
           <Route path="/" element={<Login></Login>}></Route> 
