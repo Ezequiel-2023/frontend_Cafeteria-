@@ -1,43 +1,58 @@
+// Aquí comienza el estilo de la navegación
 .main-container {
-    height: 100vh;
-  }
-  
-  .nav-column {
-    background-color:#c8edec ; // Color verde turquesa
-    padding: 20px;
-    min-height: 100vh;
-    height: 100vh;
-  
-    .nav-link {
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: rgb(15, 15, 15);
-      &:hover {
-        color: #0c4bf8;
-      }
-    }
-  }
-  
-  .content-column {
+  height: 100vh;
+}
+
+.nav-column {
+  background-color: #C9E9D2; // Color verde turquesa
+  padding: 20px;
+  min-height: 100vh;
+  height: 100vh;
+
+  .nav-link {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    margin-top: 5rem;
-  }
-  
-  .search-section {
-    margin-bottom: 30px;
-    width: 60%;
-  
-    .search-form {
-      display: flex;
-      justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: rgb(15, 15, 15);
+    
+    &:hover {
+      color: #0c4bf8;
+    }
+    
+    .icon {
+      margin-right: 10px; // Espacio entre el ícono y el texto
     }
   }
-  
-  .table-section {
-    width: 80%;
-  }
-  
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-top: 5rem;
+}
+
+// Aquí termina la navegación
+
+.login-logo {
+  max-width: 100%;
+  height: auto;
+  width: 150px; // Ajusta esto al tamaño deseado
+  display: block;
+  margin: auto;
+}
+
+.mb-4 {
+  max-width: 100%; // Asegúrate de que ocupe todo el ancho disponible
+  height: auto;
+  width: 150px; // Ajusta esto al tamaño deseado
+  display: block;
+  margin: auto;
+}
+
+.main-container {
+  padding: 20px;
+}
