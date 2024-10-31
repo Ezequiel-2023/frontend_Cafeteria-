@@ -27,11 +27,15 @@ function Login(_props) {
       } else if (email.endsWith('@gmail.com')) {
         navigate('/buscar-orden');
       } else {
-        toast.error('Correo no válido. Use un correo de @galileo.edu o @gmail.com', { autoClose: 5000 });
+        toast.error('Correo no válido. Use un correo de @galileo.edu o @gmail.com', {
+          autoClose: 2000 ,// cerrar la alerta
+        });
       }
     } catch (error) {
       console.error('Error al iniciar sesión', error);
-      toast.error('Credenciales inválidas', { autoClose: 5000 });
+      toast.error('Credenciales inválidas', { 
+        autoClose: 2000 ,// cerrar la alerta
+      });
     }
   };
 
@@ -50,7 +54,7 @@ function Login(_props) {
             onChange={(e) => setEmail(e.target.value)} // Actualizar el estado del email
           />
         </Form.Group>
-        <Form.Group className="mb-4" controlId="formGroupPassword">
+        <Form.Group className="mb-3" controlId="formGroupPassword">
           <Form.Label>Ingrese su Contraseña</Form.Label>
           <Form.Control 
             type="password" 
