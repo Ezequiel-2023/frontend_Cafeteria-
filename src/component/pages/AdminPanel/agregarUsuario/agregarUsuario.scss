@@ -1,41 +1,44 @@
- // Aquí comienza el estilo de la navegación
+// Aquí comienza el estilo de la navegación.
 .main-container {
   height: 100vh;
+  
 }
 
 .nav-column {
-  background-color: #C9E9D2; // Color verde turquesa
+  background-color: #c9e9d2; // Color verde turquesa
   padding: 20px;
-  min-height: 100vh;
   height: 100vh;
-
+  
   .nav-link {
     display: flex;
     align-items: center;
     font-weight: bold;
     margin-bottom: 15px;
     color: rgb(15, 15, 15);
-    
+    transition: color 0.3s;
+
     &:hover {
       color: #0c4bf8;
     }
-    
+
     .icon {
       margin-right: 10px; // Espacio entre el ícono y el texto
+      color: #0c4bf8;
     }
   }
 }
 
 .content-column {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
-  margin-top: 5rem;
+  overflow-y: auto; // Añadir scroll si el contenido es demasiado largo
 }
 
-// Aquí termina la navegación
+// Aquí termina la navegación.
 
 .login-logo {
   max-width: 100%;
@@ -48,11 +51,30 @@
 .mb-4 {
   max-width: 100%; // Asegúrate de que ocupe todo el ancho disponible
   height: auto;
-  width: 150px; // Ajusta esto al tamaño deseado
+  width: 1px; // Ajusta esto al tamaño deseado
   display: block;
   margin: auto;
 }
 
 .main-container {
   padding: 20px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #0c4bf8;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #094ab3;
+  }
 }

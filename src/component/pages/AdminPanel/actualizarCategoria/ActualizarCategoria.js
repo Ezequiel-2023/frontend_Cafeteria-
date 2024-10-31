@@ -52,7 +52,7 @@ function ActualizarCategoria() {
                   <Form.Control type="text" placeholder="" />
                </Form.Group>
               <Button variant="primary" type="submit">
-               Agregar
+               Agregar Nueva Categoria
               </Button>
              </Form>
           </div>
@@ -68,7 +68,7 @@ function ActualizarCategoria() {
                   <Form.Control type="text" placeholder="" />
                </Form.Group>
               <Button variant="primary" type="submit">
-               Agregar
+               Actualizar Categoria
               </Button>
              </Form>
           </div>    

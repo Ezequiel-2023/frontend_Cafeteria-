@@ -134,9 +134,9 @@ function ActualizarMenu() {
       </Col>
       {/* aquí empieza lo que está fuera de la navegación */}
         <Col xs={9} className="content-column">
-          <form onSubmit={handleSubmit} className="mb-4">
+          <form onSubmit={handleSubmit} className="mb-3">
             <div>
-              <h2 className="mb-4">Agregar/Editar Menu</h2>
+              <h2 className="mb-3">Agregar/Editar Menu</h2>
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group">

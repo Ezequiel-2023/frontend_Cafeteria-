@@ -43,24 +43,24 @@ function AgregarUsuario() {
         <Col xs={9} className="content-column">
           <div>
           <div className="rounded">
-            <Image src={IconoUsuario} rounded className="login-logo" />
+            <Image  src={IconoUsuario} rounded className="login-logo" />
           </div>
             <Form>
              <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Ingrese Su Usuario</Form.Label>
-                  <Form.Control type="text" placeholder="Enter email" />
+                  <Form.Control type="text" placeholder="Nombre del Usuario" />
               </Form.Group>
                <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Ingrese Contraeña Actual</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control type="password" placeholder="ingrese contraseña actual" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Ingrese Nueva Contraseña</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control type="password" placeholder="nueva contraseña" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Validar Nueva Contraeña</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control type="password" placeholder="repetir nueva contaseña" />
                 </Form.Group>
               <Button variant="primary" type="submit">
                Actualizar Contaeña

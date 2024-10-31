@@ -47,15 +47,15 @@ function AgregarUsuario() {
             <Form>
              <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Nombre</Form.Label>
-                  <Form.Control type="text" placeholder="Enter email" />
+                  <Form.Control type="text" placeholder="nombre de usuario" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Apellido</Form.Label>
-                  <Form.Control type="text" placeholder="Enter email" />
+                  <Form.Control type="text" placeholder="apellido de usuario" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Ingrese el  correo</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
+                  <Form.Control type="email" placeholder="correo " />
                       <Form.Text className="text-muted">
                        correo segun rol del usuario 
                       </Form.Text>
@@ -63,11 +63,11 @@ function AgregarUsuario() {
 
                <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Contraeña</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control type="password" placeholder="contraseña" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Verificar Contraseña</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control type="password" placeholder="verificar contraseña" />
                 </Form.Group>
 
                 <Form.Select aria-label="Default select example">
