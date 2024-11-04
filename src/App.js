@@ -15,8 +15,8 @@ function App() {
   return (
     <Router>
       <div className="title-bar">
-         <button id="minimize-button">_</button>
-         <button id="close-button">X</button>
+        <button id="minimize-button" onClick={() => window.electron.minimize()}>_</button>
+        <button id="close-button" onClick={() => window.electron.close()}>X</button>
       </div>
 
       <div className="App">
